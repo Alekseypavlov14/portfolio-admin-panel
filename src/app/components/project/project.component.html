@@ -32,10 +32,11 @@
     </ng-container>
 
     <div class="new-technology">
-      <textarea
+      <input
+        type="text"
         class="new-technology__input"
         [(ngModel)]="newTechnology"
-      ></textarea>
+      >
       <div 
         class="new-technologies__add-button"
         (click)="addTechnology()"
