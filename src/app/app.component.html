@@ -1,1 +1,5 @@
 <router-outlet></router-outlet>
+
+<ng-container *ngIf="message">
+  <app-popup [message]="message" (closeEvent)="closePopup()"></app-popup>
+</ng-container>

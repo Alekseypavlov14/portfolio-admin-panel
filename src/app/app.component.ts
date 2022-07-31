@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IMessage } from './types/IMessage';
 import { IUser } from './types/IUser';
 
 @Component({
@@ -6,4 +7,13 @@ import { IUser } from './types/IUser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  message: IMessage | null = {
+    title: 'Success',
+    text: 'Published'
+  }
+
+  closePopup() {
+    this.message = null
+  }
+}
