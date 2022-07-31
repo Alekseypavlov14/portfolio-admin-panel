@@ -3,22 +3,22 @@
 
   <div class="section">
     <label for="#name">Name:</label>
-    <input [(ngModel)]="project.name" type="text">
+    <input class="section__input" [(ngModel)]="project.name" type="text">
   </div>
 
   <div class="section">
     <label for="#description">Description:</label>
-    <textarea class="description" [(ngModel)]="project.description"></textarea>
+    <textarea class="description__input" [(ngModel)]="project.description"></textarea>
   </div>
 
   <div class="section">
     <label for="#link">Link:</label>
-    <input [(ngModel)]="project.link" type="text">
+    <input class="section__input" [(ngModel)]="project.link" type="text">
   </div>
 
   <div class="section">
     <label for="#repository">Repository:</label>
-    <input [(ngModel)]="project.repository" type="text">
+    <input class="section__input" [(ngModel)]="project.repository" type="text">
   </div>
 
   <div class="section">
@@ -46,7 +46,7 @@
 
   <div class="section">
     <label for="#date">Date:</label>
-    <input [(ngModel)]="project.date" type="text">
+    <input class="section__input" [(ngModel)]="project.date" type="text">
   </div>
 
   <app-button (click)="createProject()">Create new project</app-button>
