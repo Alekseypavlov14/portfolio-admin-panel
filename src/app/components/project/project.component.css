@@ -1,0 +1,98 @@
+.project {
+  width: 100%;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  padding: 20px 0px;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 1.3px;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: 5px;
+}
+
+.description {
+  width: 100%;
+  resize: none;
+  height: 60px;
+  padding: 5px;
+  outline: none;
+}
+
+.technology {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+  font-size: 20px;
+}
+
+.technology__label {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  user-select: none;
+}
+
+.technology__delete-button {
+  transition: 0.2s;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+}
+
+.technology__delete-button:hover {
+  color: red;
+}
+
+.new-technology {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-technology__input {
+  flex: 1 0 auto;
+  height: 31px;
+  resize: none;
+  padding: 5px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.new-technologies__add-button {
+  flex: 0 0 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: orange;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-technologies__add-button:active {
+  background-color: orangered;
+}

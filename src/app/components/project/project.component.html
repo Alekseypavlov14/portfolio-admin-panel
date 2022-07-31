@@ -1,0 +1,52 @@
+<div class="project">
+  <div class="title">New Project</div>
+
+  <div class="section">
+    <label for="#name">Name:</label>
+    <input [(ngModel)]="project.name" type="text">
+  </div>
+
+  <div class="section">
+    <label for="#description">Description:</label>
+    <textarea class="description" [(ngModel)]="project.description"></textarea>
+  </div>
+
+  <div class="section">
+    <label for="#link">Link:</label>
+    <input [(ngModel)]="project.link" type="text">
+  </div>
+
+  <div class="section">
+    <label for="#repository">Repository:</label>
+    <input [(ngModel)]="project.repository" type="text">
+  </div>
+
+  <div class="section">
+    <label>Technologies:</label>
+    
+    <ng-container *ngFor="let technology of project.technologies; let i = index">
+      <div class="technology">
+        <div class="technology__label">{{ technology }}</div>
+        <div class="technology__delete-button" (click)="removeTechnology(i)">X</div>
+      </div>
+    </ng-container>
+
+    <div class="new-technology">
+      <textarea
+        class="new-technology__input"
+        [(ngModel)]="newTechnology"
+      ></textarea>
+      <div 
+        class="new-technologies__add-button"
+        (click)="addTechnology()"
+      >+</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <label for="#date">Date:</label>
+    <input [(ngModel)]="project.date" type="text">
+  </div>
+
+  <app-button (click)="createProject()">Create new project</app-button>
+</div>
