@@ -8,13 +8,13 @@ import { IMessage } from 'src/app/types/IMessage';
 })
 export class PopupComponent implements OnInit {
   @Input() message!: IMessage
-  @Output() closeEvent = new EventEmitter<null>()
+  @Output() closeEvent = new EventEmitter()
 
   constructor() {}
 
   ngOnInit(): void {}
 
   close() {
-    this.closeEvent.emit(null)
+    this.closeEvent.emit()
   }
 }
