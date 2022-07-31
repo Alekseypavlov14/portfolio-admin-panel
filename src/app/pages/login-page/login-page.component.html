@@ -1,0 +1,33 @@
+<div class="page">
+  <div class="container">
+    <div class="title">Login</div>
+
+    <div class="login">
+      <label for="#login__input" class="login__label">Login</label>
+      <div class="login__input">
+        <input 
+          [(ngModel)]="login" 
+          id="login__input" 
+          type="text" 
+          autocomplete="off"
+          placeholder="login..."
+        >
+      </div>
+    </div>
+
+    <div class="password">
+      <label for="#password__input" class="password__label">Password</label>
+      <div class="password__input">
+        <input 
+          [(ngModel)]="password" 
+          id="password__input" 
+          type="password" 
+          autocomplete="off"
+          placeholder="password..."
+        >
+      </div>
+    </div>
+
+    <app-button (click)="loginHandler()">Login</app-button>
+  </div>
+</div>
