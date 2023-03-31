@@ -1,0 +1,25 @@
+.SignInForm {
+  padding: 50px 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #333;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.FormSections {
+  margin-bottom: 30px;
+}
+
+.FormSection:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.Label {
+  margin-bottom: 5px;
+}
