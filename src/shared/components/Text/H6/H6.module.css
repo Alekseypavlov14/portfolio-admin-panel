@@ -1,0 +1,13 @@
+.H6 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+@media (max-width: 767.98px) {
+  .H6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

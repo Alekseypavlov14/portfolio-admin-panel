@@ -1,0 +1,76 @@
+.Decoration {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  opacity: 50%;
+  background-color: #eee;
+  box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.2),
+  inset 0px 10px 58px 5px var(--secondary-color),
+  inset 0px -10px 58px 5px var(--secondary-color),
+  inset 0px 0px 10px 3px var(--secondary-color);
+}
+
+.Container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.Container::before {
+  width: 20px;
+  height: 60px;
+  transform: rotateZ(40deg);
+  background-color: #fff;
+  border-radius: 30%;
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  filter: blur(4px);
+}
+
+.Container::after {
+  top: 50px;
+  left: 50px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(3px);
+  position: absolute;
+  background-color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .Decoration {
+    width: 100px;
+    height: 100px;
+    opacity: 40%;
+  }
+
+  .Container::before {
+    width: 12px;
+    height: 34px;
+    transform: rotateZ(40deg);
+    background-color: #fff;
+    border-radius: 30%;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    filter: blur(4px);
+  }
+  
+  .Container::after {
+    top: 36px;
+    left: 32px;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    filter: blur(3px);
+    position: absolute;
+    background-color: #fff;
+  }
+}

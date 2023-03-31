@@ -1,0 +1,78 @@
+.Button {
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.Button {
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.Button::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(240, 240, 240, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.Button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 0px 0px var(--primary-color);
+  border: 1px solid #fff;
+}
+
+.Button:active {
+  display: block;
+  transform: translateY(0px);
+  box-shadow: none;
+  border: 1px solid var(--primary-color);
+}
+
+.Button.Big {
+  padding: 20px 50px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.Button.Outlined {
+  border: 3px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 42px;
+}
+
+@media (max-width: 767.98px) {
+  .Button.Big {
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .Button.Big.Outlined {
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,15 @@
+.NavLink {
+  transition: var(--transition);
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+.NavLink:hover {
+  color: var(--secondary-color);
+}
+
+.ActiveNavLink {
+  color: var(--secondary-color);
+}

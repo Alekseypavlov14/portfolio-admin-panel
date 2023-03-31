@@ -1,5 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,700);
 
+:root {
+  --primary-color: #5562FF;
+  --secondary-color: #FE471B;
+  --dark-color: #08101A;
+  --grey-color: #787272;
+  --light-grey-color: #EEEEEE;
+  --transition: 0.3s;
+  --container-width: 1110px;
+  --container-horizontal-padding: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;

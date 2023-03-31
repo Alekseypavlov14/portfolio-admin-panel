@@ -1,0 +1,61 @@
+.BodyLocked {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+.Background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Background.BackgroundOpened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Popup {
+  height: 500px;
+  width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #333;
+  transition: all var(--transition);
+  transform: perspective(600px) rotateX(-30deg) translateY(-10%);
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: top center;
+}
+
+.Popup.PopupOpened {
+  transform: perspective(600px) rotateX(0deg) translateY(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 767.98px) {
+  .BodyLocked {
+    padding-right: 0;
+  }
+
+  .Popup {
+    width: 300px;
+    height: 450px;
+  }
+
+  .Popup.PopupOpened {
+    transform: perspective(600px) rotateX(0deg) translateY(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
