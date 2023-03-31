@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
