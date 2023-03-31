@@ -1,0 +1,8 @@
+.LoginInputWithError {
+  outline: 2px solid red;
+}
+
+.ErrorMessage {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
