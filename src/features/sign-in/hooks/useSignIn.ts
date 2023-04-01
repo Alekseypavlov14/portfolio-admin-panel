@@ -1,4 +1,5 @@
 import { loginSelector, passwordSelector, useSignInStore } from "../store"
+import { updateAdminSelector, useAuthStore } from "@app/auth"
 import { useHandleErrors } from "./useHandleErrors"
 import { useCallback } from "react"
 import { useAdmins } from "@entities/admins"
@@ -11,6 +12,8 @@ export function useSignIn() {
 
   const isInvalid = useHandleErrors()
 
+  const updateAdmin = useAuthStore(updateAdminSelector)
+
   return useCallback(() => {
     if (isInvalid()) return
 
@@ -21,6 +24,6 @@ export function useSignIn() {
 
     if (!candidate) return 
     
-    // TODO: update auth state
+    updateAdmin(candidate)
   }, [admins, login, password])
 }
