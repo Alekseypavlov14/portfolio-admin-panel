@@ -1,10 +1,10 @@
-import { useAuthStore, adminSelector } from "@app/auth"
 import { Navigate, Route, Routes } from "react-router-dom"
+import { useCheckAuth } from "@app/auth"
 
 export function Routing() {
-  const admin = useAuthStore(adminSelector)
+  const isAuthenticated = useCheckAuth()
 
-  if (!admin) return (
+  if (!isAuthenticated) return (
     <Routes>
       <Route path="/login" element={<div>Login</div>} />
       <Route path="*" element={<Navigate to='/login' /> } />
