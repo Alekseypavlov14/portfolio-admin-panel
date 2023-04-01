@@ -1,7 +1,7 @@
+import { Routing } from "@app/routing"
+
 export const App = () => {
   return (
-    <div>
-      
-    </div>
+    <Routing />
   )
 }
